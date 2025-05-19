@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accenture | AI Test Case Generator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>AI Test Case Generator</h1>
+      <p>Upload requirements to generate test cases</p>
+      <div class="upload-section">
+        <div class="upload-area" id="drop-zone">
+          <input type="file" id="file-input" accept=".pdf,.docx" class="hidden">
+          <p id="file-prompt">Drag & drop or click to upload</p>
+          <div id="file-display" class="hidden">
+            <p id="file-name"></p>
+            <button id="delete-btn" class="delete-btn hidden">✕</button>
+          </div>
+          <p id="error-message" class="error-message hidden"></p>
+        </div>
+        <div class="action-row">
+          <button id="analyze-btn" class="btn" disabled>Create</button>
+          <button id="export-btn" class="btn" disabled>Download Excel</button>
+        </div>
+        <div id="loading-section" class="hidden" style="margin-top:1.5rem;">
+          <div class="progress-bar">
+            <div id="progress-fill" style="width:0%"></div>
+          </div>
+          <p id="status">Initializing...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -27,6 +27,11 @@ body {
   margin-bottom: 2rem;
 }
 
+h1 {
+  color: var(--neon);
+  margin-top: 0;
+}
+
 .upload-area {
   border: 2px dashed var(--neon);
   border-radius: 12px;
@@ -50,6 +55,11 @@ body {
   font-weight: 600;
   margin-top: 1rem;
   transition: all 0.3s;
+}
+
+.btn:hover:not(:disabled) {
+  background: var(--neon);
+  transform: scale(1.05);
 }
 
 #export-btn:disabled {
@@ -121,11 +131,6 @@ body {
   padding: 0.5rem;
   border-radius: 4px;
   background-color: rgba(76, 175, 80, 0.1);
-}
-
-/* This will override the display:flex when .hidden is present */
-#file-display.hidden {
-  display: none !important;
 }
 
 .action-row {

@@ -22,11 +22,29 @@
           </div>
           <p id="error-message" class="error-message hidden"></p>
         </div>
+
+        <div class="prompt-section">
+          <label for="custom-prompt">Prompt:</label>
+          <div class="prompt-input-container">
+            <textarea id="custom-prompt" rows="4" placeholder="Describe how your test cases should be generated..."></textarea>
+            <button id="send-prompt-btn" class="send-btn" disabled>➤</button>
+          </div>
+          <div class="prompt-options">
+            <input type="checkbox" id="use-default-prompt">
+            <label for="use-default-prompt">Use default prompt instead</label>
+          </div>
+        </div>
+
+        <div class="preview-section">
+          <label>Prompt Preview:</label>
+          <div id="preview-content" class="preview-content"></div>
+        </div>
+
         <div class="action-row">
           <button id="analyze-btn" class="btn" disabled>Create</button>
           <button id="export-btn" class="btn" disabled>Download Excel</button>
         </div>
-        <div id="loading-section" class="hidden" style="margin-top:1.5rem;">
+        <div id="loading-section" class="hidden">
           <div class="progress-bar">
             <div id="progress-fill" style="width:0%"></div>
           </div>
@@ -36,18 +54,12 @@
     </div>
   </div>
 
-  <!-- PDF.js for PDF text extraction -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
   <script>
     pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
   </script>
-  
-  <!-- Mammoth.js for DOCX extraction -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.7.0/mammoth.browser.min.js"></script>
-  
-  <!-- SheetJS for Excel export -->
   <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
-  
   <script src="js/script.js"></script>
 </body>
 </html>
